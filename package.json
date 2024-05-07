@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --watch index.ts",
+    "start": "tsx index.ts",
+    "postinstall": "pnpm wakapi-schema",
+    "wakapi-schema": "pnpx openapi-typescript@5 https://wakapi.dev/swagger-ui/swagger-ui/doc.json -o wakapi-schema.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/env": "^4.3.0",
+    "fastify": "^4.26.2",
+    "lowdb": "^7.0.1",
+    "openapi-fetch": "^0.9.5",
+    "satori": "^0.10.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "tsx": "^4.9.3"
+  }
+}
