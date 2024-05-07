@@ -2,6 +2,7 @@ import fastifyEnv from "@fastify/env";
 import fastify from "fastify";
 import { JSONFilePreset } from "lowdb/node";
 import { getWakapiStats } from "./wakapi.ts";
+import { readmeImage } from "./img.ts";
 
 interface Stats {
 	visitors: number;
@@ -46,7 +47,8 @@ app.get("/readme", async (request, reply) => {
 		data.visitors += 1;
 		data.codingStats = stats;
 	});
-	reply.send(db.data);
+	reply.header("content-type", "image/svg+xml");
+	reply.send(await readmeImage(db.data.visitors, db.data.codingStats));
 });
 
 await app.listen({ port: app.config.PORT });

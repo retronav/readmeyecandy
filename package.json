@@ -15,7 +15,8 @@
     "fastify": "^4.26.2",
     "lowdb": "^7.0.1",
     "openapi-fetch": "^0.9.5",
-    "satori": "^0.10.13"
+    "satori": "^0.10.13",
+    "satori-html": "^0.3.2"
   },
   "devDependencies": {
     "@types/node": "^20.12.10",
