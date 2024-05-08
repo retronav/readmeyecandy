@@ -19,8 +19,8 @@ export const readmeImage = async (visitors: number, codingStats: string) =>
 			</p>
 		</div>`,
 		{
-			height: 200,
-			width: 1000,
+			height: 80,
+			width: 1600,
 			fonts: [
 				{
 					name: "Press Start 2P",

@@ -3,9 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx --watch index.ts",
-    "start": "tsx index.ts",
-    "postinstall": "pnpm wakapi-schema",
-    "wakapi-schema": "pnpx openapi-typescript@5 https://wakapi.dev/swagger-ui/swagger-ui/doc.json -o wakapi-schema.ts"
+    "start": "tsx index.ts"
   },
   "keywords": [],
   "author": "",
