@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/env": "^4.3.0",
+    "dayjs": "^1.11.11",
     "fastify": "^4.26.2",
     "lowdb": "^7.0.1",
     "openapi-fetch": "^0.9.5",

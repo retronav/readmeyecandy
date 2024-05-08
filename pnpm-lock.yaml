@@ -8,6 +8,9 @@ dependencies:
   '@fastify/env':
     specifier: ^4.3.0
     version: 4.3.0
+  dayjs:
+    specifier: ^1.11.11
+    version: 1.11.11
   fastify:
     specifier: ^4.26.2
     version: 4.26.2
@@ -397,6 +400,10 @@ packages:
       camelize: 1.0.1
       css-color-keywords: 1.0.0
       postcss-value-parser: 4.2.0
+    dev: false
+
+  /dayjs@1.11.11:
+    resolution: {integrity: sha512-okzr3f11N6WuqYtZSvm+F776mB41wRZMhKP+hc34YdW+KmtYYK9iqvHSwo2k9FEH3fhGXvOPV6yz2IcSrfRUDg==}
     dev: false
 
   /debug@4.3.4:

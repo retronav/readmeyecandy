@@ -3,6 +3,7 @@ import fastify from "fastify";
 import { JSONFilePreset } from "lowdb/node";
 import { getWakapiStats } from "./wakapi.ts";
 import { readmeImage } from "./img.ts";
+import dayjs from "dayjs";
 
 interface Stats {
 	visitors: number;
@@ -48,6 +49,8 @@ app.get("/readme", async (request, reply) => {
 		data.codingStats = stats;
 	});
 	reply.header("content-type", "image/svg+xml");
+	reply.header("cache-control", "no-cache");
+	reply.header("expires", dayjs().subtract(6, "hour").format("ddd, DD MMM YYYY HH:mm:ss ZZ"));
 	reply.send(await readmeImage(db.data.visitors, db.data.codingStats));
 });
 
